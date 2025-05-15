@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey | Maximilian</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="initPortfolio()">
+  <header>
+    <h1>Survey</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+  <main>
+    <form id="surveyForm" onsubmit="return validateSurveyForm()">
+
+      <label for="age">What is your age group?</label><br>
+      <select id="age" name="age" required>
+        <option value="">--Select--</option>
+        <option value="under18">Under 18</option>
+        <option value="18-25">18–25</option>
+        <option value="26-35">26–35</option>
+        <option value="36-50">36–50</option>
+        <option value="50+">50+</option>
+      </select><br><br>
+  
+      <label>What is your favorite development tool?</label><br>
+      <input type="radio" name="tool" value="VSCode" required> VSCode<br>
+      <input type="radio" name="tool" value="Sublime"> Sublime<br>
+      <input type="radio" name="tool" value="Atom"> Atom<br><br>
+  
+      <label>Your web development experience level:</label><br>
+      <input type="radio" name="experience" value="beginner" required> Beginner<br>
+      <input type="radio" name="experience" value="intermediate"> Intermediate<br>
+      <input type="radio" name="experience" value="advanced"> Advanced<br><br>
+  
+      <label>Select your interests:</label><br>
+      <input type="checkbox" name="interest" value="HTML"> HTML<br>
+      <input type="checkbox" name="interest" value="CSS"> CSS<br>
+      <input type="checkbox" name="interest" value="JS"> JavaScript<br>
+      <input type="checkbox" name="interest" value="UI/UX"> UI/UX<br><br>
+  
+      <label>Preferred learning methods:</label><br>
+      <input type="checkbox" name="method" value="videos"> Video Tutorials<br>
+      <input type="checkbox" name="method" value="books"> Books<br>
+      <input type="checkbox" name="method" value="projects"> Building Projects<br>
+      <input type="checkbox" name="method" value="interactive"> Interactive Courses<br><br>
+  
+      <label for="satisfaction">How satisfied are you with this portfolio? (1–10)</label><br>
+      <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"><br><br>
+  
+      <label for="feedback">Additional Feedback:</label><br>
+      <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Your comments..."></textarea><br><br>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Maximilian</p>
+  </footer>
+  <button id="scrollTop" onclick="scrollToTop()">↑ Top</button>
+</body>
+</html>

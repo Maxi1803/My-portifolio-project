@@ -1,0 +1,179 @@
+/* styles.css */
+
+/* Base styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f9ff;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #1d3557, #457b9d);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #f1faee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #a8dadc;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Homepage */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* About Page - 2 Column Layout */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .column {
+  flex: 1;
+  min-width: 300px;
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Projects Page - 3 Column Layout */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.project:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.project .details {
+  display: none;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button,
+form input[type="submit"] {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: #1d3557;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+}
+/* Dark mode */
+.dark-mode {
+  background-color: #1f1f1f;
+  color: #f4f4f4;
+}
+
+.dark-mode a {
+  color: #a8dadc;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #333;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.video-container iframe {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}

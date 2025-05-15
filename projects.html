@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects |Maximilian</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="initPortfolio()">
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+  </header>
+  <main class="projects">
+    <div class="filters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('html')">HTML</button>
+      <button onclick="filterProjects('js')">JavaScript</button>
+    </div>
+    <div class="project html" onclick="toggleDetails(this)">
+      <h2>HTML Project</h2>
+      <p class="details">A responsive HTML website.</p>
+    </div>
+    <div class="project js" onclick="toggleDetails(this)">
+      <h2>JS Calculator</h2>
+      <p class="details">A JavaScript-powered calculator.</p>
+    </div>
+    <div class="project js" onclick="toggleDetails(this)">
+      <h2>Todo App</h2>
+      <p class="details">A full-featured to-do list app.</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Maximilian</p>
+  </footer>
+  <button id="scrollTop" onclick="scrollToTop()">↑ Top</button>
+</body>
+</html>
